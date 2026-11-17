@@ -3,20 +3,50 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Каталог</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог номеров</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header><h1>Сладкие сны</h1><a href="index.html">Главная</a></header>
-    <main>
-        <div id="filters">
-            <select id="category"><option value="">Все</option><option value="standard">Стандарт</option><option value="lux">Люкс</option></select>
-            <button onclick="applyFilter()">Применить</button>
-            <button onclick="resetFilter()">Сбросить</button>
+    <header class="main-header">
+        <div class="container header-flex">
+            <a href="index.html" class="logo-link"><h1 class="logo">Сладкие сны 🌙</h1></a>
+            <nav><a href="index.html" class="nav-link">На главную</a></nav>
         </div>
-        <div id="rooms"></div>
+    </header>
+
+    <main class="container page-content">
+        <section class="filters-section">
+            <h2>Поиск номера</h2>
+            <div class="filter-controls">
+                <select id="categoryFilter">
+                    <option value="">Все категории</option>
+                    <option value="standard">Стандарт</option>
+                    <option value="comfort">Комфорт</option>
+                    <option value="lux">Люкс</option>
+                </select>
+                <button onclick="applyFilter()" class="btn btn-secondary">Применить</button>
+                <button onclick="resetFilter()" class="btn btn-outline">Сбросить</button>
+            </div>
+        </section>
+
+        <section id="roomsGrid" class="rooms-grid">
+            <!-- Номера загружаются через JS -->
+            <div class="loading">Загрузка номеров...</div>
+        </section>
     </main>
-    <footer><p>Контакты...</p></footer>
+
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="contact-block">
+                <h3>Контакты</h3>
+                <p>📍 г. Москва, ул. Ленина, д. 10</p>
+                <p>📞 +7 (999) 123-45-67</p>
+                <p>✉️ info@sweetdreams.ru</p>
+            </div>
+        </div>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
