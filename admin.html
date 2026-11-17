@@ -1,0 +1,21 @@
+<!-- admin.html -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Админка</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="login">
+        <input type="text" id="adminLogin" placeholder="Логин">
+        <input type="password" id="adminPass" placeholder="Пароль">
+        <button onclick="login()">Войти</button>
+    </div>
+    <div id="panel" style="display:none;">
+        <h2>Заявки</h2>
+        <div id="bookingsList"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
