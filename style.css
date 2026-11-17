@@ -1,5 +1,79 @@
 /* style.css */
-body { font-family: Arial, sans-serif; margin: 0; padding: 20px; }
-header, footer { background: #f4f4f4; padding: 10px; text-align: center; }
-#rooms { display: flex; gap: 20px; flex-wrap: wrap; }
-.room-card { border: 1px solid #ddd; padding: 10px; width: 200px; }
+:root {
+    --primary: #6c5ce7;
+    --secondary: #a29bfe;
+    --dark: #2d3436;
+    --light: #f5f6fa;
+    --white: #ffffff;
+    --success: #00b894;
+    --danger: #d63031;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--light);
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+/* Header */
+.main-header { background: var(--white); box-shadow: 0 2px 10px rgba(0,0,0,0.05); padding: 20px 0; }
+.logo { color: var(--primary); font-size: 1.8rem; }
+.slogan { color: #636e72; font-style: italic; }
+.header-flex { display: flex; justify-content: space-between; align-items: center; }
+.nav-link { text-decoration: none; color: var(--dark); font-weight: 600; }
+
+/* Hero */
+.hero { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: var(--white); padding: 100px 0; text-align: center; }
+.hero h2 { font-size: 2.5rem; margin-bottom: 20px; }
+
+/* Buttons */
+.btn { padding: 12px 24px; border: none; border-radius: 8px; cursor: pointer; font-weight: 600; transition: 0.3s; text-decoration: none; display: inline-block; }
+.btn-primary { background: var(--primary); color: var(--white); }
+.btn-primary:hover { background: #5649c0; }
+.btn-secondary { background: var(--dark); color: var(--white); }
+.btn-outline { background: transparent; border: 2px solid var(--dark); color: var(--dark); }
+.full-width { width: 100%; margin-top: 20px; }
+
+/* Catalog */
+.page-content { padding: 40px 0; }
+.filters-section { background: var(--white); padding: 20px; border-radius: 12px; margin-bottom: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+.filter-controls { display: flex; gap: 10px; margin-top: 15px; }
+select { padding: 10px; border-radius: 6px; border: 1px solid #ddd; }
+
+.rooms-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 30px; }
+.room-card { background: var(--white); border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); transition: transform 0.3s; }
+.room-card:hover { transform: translateY(-5px); }
+.room-img { height: 200px; background: #ddd; display: flex; align-items: center; justify-content: center; color: #888; }
+.room-info { padding: 20px; }
+.room-price { color: var(--primary); font-size: 1.2rem; font-weight: bold; margin: 10px 0; }
+
+/* Forms */
+.booking-card, .login-card { max-width: 500px; margin: 0 auto; background: var(--white); padding: 40px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+.form-group { margin-bottom: 20px; }
+.form-row { display: flex; gap: 20px; }
+.form-row .form-group { flex: 1; }
+label { display: block; margin-bottom: 8px; font-weight: 600; font-size: 0.9rem; }
+input { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 6px; font-family: inherit; }
+input:focus { outline: none; border-color: var(--primary); }
+
+/* Admin */
+.admin-header { background: var(--dark); color: var(--white); padding: 20px; text-align: center; }
+.bookings-list { margin-top: 20px; }
+.booking-item { background: var(--white); padding: 15px; margin-bottom: 10px; border-radius: 8px; display: flex; justify-content: space-between; align-items: center; }
+.status-pending { color: orange; }
+.status-approved { color: var(--success); }
+
+/* Footer */
+.main-footer { background: var(--dark); color: #b2bec3; padding: 40px 0 20px; margin-top: 50px; }
+.footer-grid { display: grid; gap: 20px; }
+.contact-block h3 { color: var(--white); margin-bottom: 15px; }
+.copyright { text-align: center; margin-top: 30px; border-top: 1px solid #444; padding-top: 20px; font-size: 0.8rem; }
+
+.error-text { color: var(--danger); margin-top: 10px; font-size: 0.9rem; }
+.message-box { margin-top: 20px; padding: 15px; border-radius: 6px; text-align: center; display: none; }
+.success { background: #dff9fb; color: var(--success); border: 1px solid var(--success); }
