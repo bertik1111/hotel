@@ -3,19 +3,30 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Админка</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Панель администратора</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id="login">
-        <input type="text" id="adminLogin" placeholder="Логин">
-        <input type="password" id="adminPass" placeholder="Пароль">
-        <button onclick="login()">Войти</button>
-    </div>
-    <div id="panel" style="display:none;">
-        <h2>Заявки</h2>
-        <div id="bookingsList"></div>
-    </div>
+    <header class="admin-header">
+        <h2>Админ-панель</h2>
+    </header>
+
+    <main class="container page-content">
+        <div id="loginSection" class="login-card">
+            <h3>Вход для администратора</h3>
+            <input type="text" id="adminLogin" placeholder="Логин">
+            <input type="password" id="adminPass" placeholder="Пароль">
+            <button onclick="login()" class="btn btn-primary">Войти</button>
+            <p id="loginError" class="error-text"></p>
+        </div>
+
+        <div id="adminPanel" style="display:none;">
+            <h3>Заявки на бронирование</h3>
+            <div id="bookingsList" class="bookings-list"></div>
+        </div>
+    </main>
     <script src="script.js"></script>
 </body>
 </html>
