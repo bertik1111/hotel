@@ -1,0 +1,22 @@
+<!-- catalog.html -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Каталог</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header><h1>Сладкие сны</h1><a href="index.html">Главная</a></header>
+    <main>
+        <div id="filters">
+            <select id="category"><option value="">Все</option><option value="standard">Стандарт</option><option value="lux">Люкс</option></select>
+            <button onclick="applyFilter()">Применить</button>
+            <button onclick="resetFilter()">Сбросить</button>
+        </div>
+        <div id="rooms"></div>
+    </main>
+    <footer><p>Контакты...</p></footer>
+    <script src="script.js"></script>
+</body>
+</html>
